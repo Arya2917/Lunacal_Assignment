@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Dave</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Half - Empty Reserved Space -->
+        <div class="left-half"></div>
+
+        <!-- Right Half - Widgets -->
+        <div class="right-half">
+            
+            <!-- Top Widget - Profile Info Tabs -->
+            <div class="widget profile-widget">
+                <!-- Tabs Header -->
+                <div class="tabs-header">
+                    <button class="tab active" data-tab="about">About Me</button>
+                    <button class="tab" data-tab="experiences">Experiences</button>
+                    <button class="tab" data-tab="recommended">Recommended</button>
+                </div>
+
+                <!-- Tab Content -->
+                <div class="tab-content">
+                    <div class="tab-pane active" id="about">
+                        <p>Hello! I'm Dave, your sales rep here from Salesforce. I've been working at this awesome company for 3 years now.</p>
+                        <p>I was born and raised in Albany, NY & have been living in Santa Carla for the past 10 years with my wife Tiffany and my 4-year-old twin daughters, Emma and Ella. Both of them are just starting school, so my calendar is usually blocked between 9-10 AM. This is a... </p>
+                        <p>I love spending time with my family, exploring new hiking trails, and trying out different coffee shops around the city. On weekends, you'll often find me at the local farmer's market or coaching my daughters' soccer team.</p>
+                        <p>I'm passionate about helping businesses grow through innovative solutions and building lasting relationships with clients. Feel free to reach out if you'd like to connect!</p>
+                    </div>
+                    <div class="tab-pane" id="experiences">
+                        <p><strong>Sales Representative at Salesforce</strong><br>
+                        2022 - Present<br>
+                        Leading enterprise sales initiatives and managing key client relationships across multiple industries.</p>
+                        
+                        <p><strong>Account Manager at TechCorp</strong><br>
+                        2019 - 2022<br>
+                        Managed a portfolio of 50+ accounts, achieving 125% of quota consistently.</p>
+                        
+                        <p><strong>Business Development Associate at StartupXYZ</strong><br>
+                        2017 - 2019<br>
+                        Developed new business opportunities and expanded market presence in the Northeast region.</p>
+                    </div>
+                    <div class="tab-pane" id="recommended">
+                        <p><strong>Books I'm Currently Reading:</strong><br>
+                        • "The Challenger Sale" by Matthew Dixon<br>
+                        • "Never Split the Difference" by Chris Voss</p>
+                        
+                        <p><strong>Favorite Podcasts:</strong><br>
+                        • Sales Gravy<br>
+                        • The Revenue Show<br>
+                        • How I Built This</p>
+                        
+                        <p><strong>Tools I Swear By:</strong><br>
+                        • Salesforce CRM (of course!)<br>
+                        • LinkedIn Sales Navigator<br>
+                        • Gong for conversation intelligence</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Widget - Gallery Section -->
+            <div class="widget gallery-widget">
+                <!-- Gallery Header -->
+                <div class="gallery-header">
+                    <div class="gallery-label">Gallery</div>
+                    <div class="gallery-controls">
+                        <button class="btn-add-image">+ ADD IMAGE</button>
+                        <button class="btn-arrow" id="prev-arrow">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <button class="btn-arrow" id="next-arrow">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Image Strip -->
+                <div class="image-strip-container">
+                    <div class="image-strip" id="imageStrip">
+                        <div class="image-thumbnail">
+                            <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=300&h=300&fit=crop" alt="Gallery Image 1">
+                        </div>
+                        <div class="image-thumbnail">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=300&h=300&fit=crop" alt="Gallery Image 2">
+                        </div>
+                        <div class="image-thumbnail">
+                            <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=300&h=300&fit=crop" alt="Gallery Image 3">
+                        </div>
+                        <div class="image-thumbnail">
+                            <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=300&h=300&fit=crop" alt="Gallery Image 4">
+                        </div>
+                        <div class="image-thumbnail">
+                            <img src="https://images.unsplash.com/photo-1444212477490-ca407925329e?w=300&h=300&fit=crop" alt="Gallery Image 5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

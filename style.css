@@ -1,0 +1,322 @@
+/* RESET & BASE STYLES*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #1C1E22;
+    color: #DADADA;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/*CONTAINER & LAYOUT */
+
+.container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Left Half - Empty Reserved Space */
+.left-half {
+    flex: 1;
+    min-width: 50%;
+}
+
+/* Right Half - Contains Widgets */
+.right-half {
+    flex: 1;
+    min-width: 50%;
+    padding: 5vh 5vw;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-height: 100vh;
+}
+
+/*WIDGET BASE STYLES*/
+
+.widget {
+    background: linear-gradient(135deg, #2A2D32 0%, #1F2124 100%);
+    border-radius: 1rem;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* PROFILE WIDGET - TABS */
+
+.profile-widget {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+}
+
+/* Tabs Header */
+.tabs-header {
+    display: flex;
+    width: 100%;
+    background: transparent;
+}
+
+.tab {
+    flex: 1;
+    padding: 16px 20px;
+    background: transparent;
+    border: none;
+    color: #A0A0A0;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.tab:first-child {
+    border-radius: 1rem 0 0 0;
+}
+
+.tab:last-child {
+    border-radius: 0 1rem 0 0;
+}
+
+.tab.active {
+    background: #0E0E0E;
+    color: #FFFFFF;
+}
+
+.tab:hover:not(.active) {
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Tab Content Area */
+.tab-content {
+    padding: 24px;
+    max-height: 300px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #3A3D42 transparent;
+}
+
+/* Custom Scrollbar for Webkit Browsers */
+.tab-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.tab-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.tab-content::-webkit-scrollbar-thumb {
+    background: #3A3D42;
+    border-radius: 3px;
+}
+
+.tab-content::-webkit-scrollbar-thumb:hover {
+    background: #4A4D52;
+}
+
+/* Tab Panes */
+.tab-pane {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tab-pane p {
+    margin-bottom: 16px;
+    line-height: 1.6;
+    font-size: 14px;
+    color: #DADADA;
+}
+
+.tab-pane p:last-child {
+    margin-bottom: 0;
+}
+
+.tab-pane strong {
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+/* ===========================
+   GALLERY WIDGET
+   =========================== */
+
+.gallery-widget {
+    padding: 20px 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Gallery Header */
+.gallery-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.gallery-label {
+    background: #0E0E0E;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 10px;
+}
+
+.gallery-controls {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+/* Add Image Button */
+.btn-add-image {
+    background: #4A4D52;
+    color: #FFFFFF;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.btn-add-image:hover {
+    background: #5B5E63;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Arrow Buttons */
+.btn-arrow {
+    width: 32px;
+    height: 32px;
+    background: #1C1D20;
+    border: none;
+    border-radius: 50%;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-arrow:hover {
+    background: #2A2D32;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+}
+
+.btn-arrow:active {
+    transform: scale(0.95);
+}
+
+/* Image Strip Container */
+.image-strip-container {
+    overflow: hidden;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.image-strip {
+    display: flex;
+    gap: 12px;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Image Thumbnails */
+/* Image Thumbnails */
+.image-thumbnail {
+    flex-shrink: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #1C1D20;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.image-thumbnail:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+.image-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/*RESPONSIVE ADJUSTMENTS*/
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .right-half {
+        padding: 4vh 4vw;
+    }
+    
+    .image-thumbnail {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .right-half {
+        padding: 6vh 6vw;
+    }
+    
+    .image-thumbnail {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+/* Minimum width enforcement */
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .left-half {
+        display: none;
+    }
+    
+    .right-half {
+        min-width: 100%;
+    }
+}
